@@ -13,7 +13,7 @@ module.exports = {
         host: 'localhost',
         name: 'PersonalBlog',
         username: 'root',
-        password: 'cjw1017',
+        password: 'bobbengo1201',
         dialect: 'mysql'
     },
 }
