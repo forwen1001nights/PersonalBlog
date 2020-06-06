@@ -35,10 +35,8 @@ module.exports= {
         let result = null;
         //验证blog对象
         const error = validate(blog, rule.blogRules);
-        console.log(error)
         //将blog添加进数据库
         if(!error) {
-            console.log(2)
             result = await Blog.create(blog);
         }
         return result;

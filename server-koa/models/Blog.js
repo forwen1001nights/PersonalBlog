@@ -7,6 +7,10 @@ const Blog = sequelize.define('Blog', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    customaryContent: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
     content: {
         type: DataTypes.TEXT,
         allowNull: false

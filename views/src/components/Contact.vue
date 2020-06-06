@@ -4,7 +4,9 @@
             <i class="el-icon-user" @click="toAbout"></i>   
         </div>
         <div class="flex_item">
-            <i class="el-icon-message"></i>
+            <a href="mailto:easy2long@outlook.com">
+                <i class="el-icon-message"></i>
+            </a>
         </div>
     </div>
 </template>

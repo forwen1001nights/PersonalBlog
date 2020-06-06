@@ -19,7 +19,7 @@
           </el-dropdown>
         </div>
       </div>
-      <mavon-editor @change="setContent" />
+      <mavon-editor @change="setContent" :value="customaryContent" />
       <el-button @click="onSubmit">提交</el-button>
     </div>
 </template>
@@ -37,6 +37,7 @@ export default {
     data() {
         return {
             pTagList,
+            customaryContent: '',
             content: '',
             editorOption: {},
             title: '',
@@ -53,6 +54,7 @@ export default {
           this.parentTag = value;
         },
         setContent(value, render) {
+          this.customaryContent = value;
           this.content = render;
         },
         
@@ -69,7 +71,8 @@ export default {
                 title: this.title,
                 tag: this.tag,
                 content: this.content,
-                parentTag: this.parentTag
+                parentTag: this.parentTag,
+                customaryContent: this.customaryContent
               }
             })
             if(result.data.status === 200) {
@@ -86,6 +89,7 @@ export default {
                 tag: this.tag,
                 content: this.content,
                 parentTag: this.parentTag,
+                customaryContent: this.customaryContent,
                 ctime: moment().format("YYYY-MM-DD")
               }
             })
@@ -101,7 +105,7 @@ export default {
           this.editBlogID = blogID;
           this.ifEdit = true;
           const result = await find({
-            need: ['title', 'tag', 'parentTag', 'content'],
+            need: ['title', 'tag', 'parentTag', 'content', 'customaryContent'],
             by: {
               id: blogID
             }
@@ -117,12 +121,12 @@ export default {
           this.tag = data.tag;
           this.parentTag = data.parentTag;
           this.content = data.content;
+          this.customaryContent = data.customaryContent;
+          const pTag = pTagList.filter( ele => ele.value === data.parentTag)[0];
+          this.parentTagName = pTag.name;
         }
     },
     computed: {
-        // editor() {
-        //     return this.$refs.myQuillEditor.quill;
-        // },
     }
 }
 </script>

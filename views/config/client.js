@@ -4,5 +4,5 @@ export default {
     api: {
         admin: '/api/admin',
         blog: '/api/blog'
-    }
+    },
 }

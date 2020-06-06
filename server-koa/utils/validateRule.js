@@ -1,4 +1,3 @@
-const serverConfig = require('../config/server');
 module.exports = {
     // 对博客的验证
     blogRules: {
@@ -12,6 +11,12 @@ module.exports = {
             type: 'string'
         },
         content: {
+            presence: {
+                allowEmpty: false
+            },
+            type: 'string'
+        },
+        customaryContent: {
             presence: {
                 allowEmpty: false
             },
@@ -33,7 +38,6 @@ module.exports = {
             length: {
                 maximum: 10
             },
-            inclusion: serverConfig.parentTag,
             type: 'string'
         },
         ctime: {
@@ -56,6 +60,9 @@ module.exports = {
         content: {
             type: 'string'
         },
+        customaryContent: {
+            type: 'string'
+        },
         tag: {
             length: {
                 maximum: 10
@@ -66,7 +73,6 @@ module.exports = {
             length: {
                 maximum: 10
             },
-            inclusion: serverConfig.parentTag,
             type: 'string'
         },
         ctime: {

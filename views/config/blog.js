@@ -30,3 +30,4 @@ export const pTagList = [
         iconClass: 'el-icon-search'
     }
 ]
+// exports.parentTag = pTagList;
