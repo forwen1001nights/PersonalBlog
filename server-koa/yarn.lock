@@ -321,6 +321,11 @@ koa-static@^5.0.0:
     debug "^3.1.0"
     koa-send "^5.0.0"
 
+koa2-connect-history-api-fallback@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/koa2-connect-history-api-fallback/-/koa2-connect-history-api-fallback-0.1.2.tgz#5f004fd2344d022e2de3fdca5f13bad23f23af41"
+  integrity sha512-nRbvF2LWBFeJiYIa6TVumaaaScXhjlDRGqhkrzCt9SYFYv3kZvxXXwuYdOL9qIsX2JoUSIKct1JHIkz6X2ohXw==
+
 koa2-router@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/koa2-router/-/koa2-router-2.0.1.tgz#708b96d6349ea823ee12fe6e6b9cb6693820430d"
