@@ -5,13 +5,6 @@
         </div>
         <div class="nav_list">
             <ul>
-                <!-- <li @click="changeActive('front-end')" :class="[parentTag=='front-end'?'active':'']"><i class="el-icon-help"></i>前端</li>
-                <li @click="changeActive('after-end')" :class="[parentTag=='after-end'?'active':'']"><i class="el-icon-data-analysis"></i>后端</li>
-                <li @click="changeActive('life')" :class="[parentTag=='life'?'active':'']"><i class="el-icon-magic-stick"></i>乐活</li>
-                <li @click="changeActive('others')" :class="[parentTag=='others'?'active':'']"><i class="el-icon-monitor"></i>杂项</li>
-                <li @click="changeActive('sketch')" :class="[parentTag=='sketch'?'active':'']"><i class="el-icon-reading"></i>随笔</li>
-                <li @click="changeActive('search')" :class="[parentTag=='search'?'active':'']"><i class="el-icon-search"></i>搜索</li> -->
-
                 <li v-for="item in pTagList" :key="item.value" @click="changeActive(item.value)" :class="[parentTag==item.value ? 'active' : '']"><i :class="item.iconClass"></i>{{item.name}}</li>
             </ul>
         </div>

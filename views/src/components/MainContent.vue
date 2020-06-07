@@ -21,8 +21,7 @@
     </div>
 </template>
 <script>
-import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css'
+import hljs from 'hljs';
 import { find } from '../service/api'
 import { pTagList } from '../../config/blog'
 import Pulldown from '../components/Pulldown'
@@ -49,7 +48,7 @@ export default {
             bind(el) {
                 let codes = el.querySelectorAll('pre code');
                 codes.forEach(codeBlock => {
-                    hljs(codeBlock)
+                    hljs.highlightBlock(codeBlock);
                 });
             }
         }

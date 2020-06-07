@@ -25,11 +25,6 @@ export function editBlog(data) {
     return api.put('/api/blog/update', data)
 }
 
-// export function getContent(options) {
-//     return api.get('getContent',{
-//         params: options
-//     })
-// }
 export function deleteBlog(condition) {
     return api.delete('/api/blog/delete', {data: condition})
 }

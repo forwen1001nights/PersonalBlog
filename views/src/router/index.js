@@ -1,14 +1,19 @@
+// route lazy load
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Layout from '../views/Layout.vue'
-import EditBlog from '../views/EditBlog.vue'
-import Login from '../views/Login.vue'
-import BlogManager from '../views/BlogManager.vue'
-import MainContent from '../components/MainContent.vue'
-import Default from '../components/Default.vue'
-import Catalog from '../components/Catalog.vue'
-import About from '../components/About.vue'
+
+const Layout = () => import('../views/Layout')
+const EditBlog = () => import('../views/EditBlog')
+const Login = () => import('../views/Login')
+const BlogManager = () => import('../views/BlogManager')
+const MainContent = () => import('../components/MainContent')
+const Default = () => import('../components/Default')
+const Catalog = () => import('../components/Catalog')
+const About = () => import('../components/About')
+
 import store from '../store/index'
+
+
 Vue.use(VueRouter)
 
   const routes = [

@@ -1,5 +1,4 @@
 const syncAll = require('./models/sync');
-const path = require('path');
 require('./service/init');
 const koa = require("koa2");
 const serverConfig = require("./config/server");
@@ -16,9 +15,12 @@ const static = require("koa-static");
 // routers
 const adminRouter = require("./routes/admin");
 const blogRouter = require("./routes/blog");
-// app.use(async (req,res) => {
-//     console.log(req)
+
+// app.use( async (ctx, next) => {
+//     console.log(ctx.url);
+//     await next();
 // })
+
 app.use(historyApiFallback({
     htmlAcceptHeaders: ['text/html', '*/*']
 }));
