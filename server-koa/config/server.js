@@ -12,8 +12,8 @@ module.exports = {
     database: {
         host: 'localhost',
         name: 'PersonalBlog',
-        username: 'root',
-        password: 'bobbengo1201',
+        username: 'root', // your database username
+        password: 'xxxxxx', // your database password
         dialect: 'mysql'
     },
 }

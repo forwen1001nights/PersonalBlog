@@ -6,7 +6,7 @@ module.exports = {
                 allowEmpty: false
             },
             length: {
-                maximum: 30
+                maximum: 128
             },
             type: 'string'
         },
@@ -27,7 +27,7 @@ module.exports = {
                 allowEmpty: false
             },
             length: {
-                maximum: 10
+                maximum: 20
             },
             type: 'string'
         },
@@ -36,7 +36,7 @@ module.exports = {
                 allowEmpty: false
             },
             length: {
-                maximum: 10
+                maximum: 20
             },
             type: 'string'
         },
@@ -53,7 +53,7 @@ module.exports = {
     changeRule: {
         title: {
             length: {
-                maximum: 30
+                maximum: 128
             },
             type: 'string'
         },
@@ -65,13 +65,13 @@ module.exports = {
         },
         tag: {
             length: {
-                maximum: 10
+                maximum: 20
             },
             type: 'string'
         },
         parentTag: {
             length: {
-                maximum: 10
+                maximum: 20
             },
             type: 'string'
         },

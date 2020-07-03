@@ -38,6 +38,8 @@ module.exports= {
         //将blog添加进数据库
         if(!error) {
             result = await Blog.create(blog);
+        }else {
+            console.log(error)
         }
         return result;
     },
